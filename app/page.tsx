@@ -1,5 +1,13 @@
 import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function Home() {
-  return <h1 className="text-limegreen"><a href="">Hello</a></h1>;
+  return (
+    <>
+      <Header />
+      <main>
+        
+      </main>
+    </>
+  );
 }

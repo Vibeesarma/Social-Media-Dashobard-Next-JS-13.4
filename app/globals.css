@@ -16,7 +16,7 @@
   }
 
   body {
-    @apply m-0 p-0;
+    @apply m-0 p-0 bg-dark_bg text-dark_text2;
   }
 }
 
@@ -26,7 +26,14 @@
   h1,
   h2,
   h3 {
-    @apply mt-0;
+    @apply mt-0 leading-4;
+  }
+
+  h1 {
+    @apply text-2xl mb-0.5 md:text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl mb-6;
   }
 
   a,
@@ -34,19 +41,73 @@
   a:active {
     @apply no-underline;
   }
+
+  label {
+    @apply text-sm;
+  }
 }
 
-/* compoents */
+/* components */
 @layer utilities {
+  .container {
+    @apply max-w-5xl px-6 md:p-0 mx-auto mb-12 w-full;
+  }
+
+  .header {
+    @apply flex flex-wrap justify-between items-center mt-9;
+  }
+
+  .header__title {
+    @apply w-full md:w-auto;
+  }
+
+  /* card */
   .card {
     @apply p-5;
   }
 
-  .toggle > button {
-    @apply rounded-1/2 w-4 h-4 bg-toggle;
+  /* toggle */
+  .toggle {
+    @apply border-none grid grid-cols-3 grid-rows-2 gap-y-1 gap-x-2 m-0;
   }
 
-  .container {
-    @apply max-w-5xl px-6 md:p-0 mx-auto;
+  .toggle__wrapper {
+    @apply h-6 w-16 col-start-2 col-end-3 row-start-1 row-end-2 relative;
+  }
+
+  .toggle__input {
+    @apply opacity-0 my-0 -ml-0.5 -mr-0.5 w-5 h-6;
+  }
+
+  .toggle__background {
+    @apply bg-gradient-to-tr from-toggle_bg_start to-toggle_bg_end h-full block rounded-xl overflow-hidden absolute w-full top-0;
+  }
+
+  .toggle__button {
+    @apply rounded-full w-5 h-5 bg-dark_bg absolute left-0.5 right-full top-0.5 transition-all duration-200 ease-in-out;
+  }
+
+  .toggle__input:focus ~ .toggle__button {
+    @apply border border-white_bg;
+  }
+
+  .light_input:checked ~ .toggle__button {
+    @apply right-0.5 left-auto;
+  }
+
+  .system_input:checked ~ .toggle__button {
+    @apply right-auto left-3 transform translate-x-1/2;
+  }
+
+  .toggle > label[for="dark"] {
+    @apply col-start-1 col-end-2 justify-self-end self-center;
+  }
+
+  .toggle > label[for="system"] {
+    @apply col-start-1 col-end-4 row-start-2 row-end-3 justify-self-center self-start;
+  }
+
+  .toggle > label[for="light"] {
+    @apply col-start-3 col-end-4 self-center;
   }
 }

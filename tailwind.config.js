@@ -16,7 +16,7 @@ module.exports = {
     screens: {
       // custom size for design
       sm: "640px",
-      md: "950px",
+      md: "1150px",
       lg: "1400px",
     },
     colors: {
