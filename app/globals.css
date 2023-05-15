@@ -57,13 +57,80 @@
     @apply flex flex-wrap justify-between items-center mt-9;
   }
 
+  .cards{
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8
+  }
+
   .header__title {
     @apply w-full md:w-auto;
   }
 
   /* card */
   .card {
-    @apply p-5;
+    @apply bg-dark_card text-dark_text1 w-full text-center p-6 rounded-md flex-1;
+  }
+
+  .card--facebook{
+
+    @apply border-t-4 border-facebook
+  }
+
+  .card__icon {
+    @apply mr-2
+  }
+  
+  .card__username {
+    @apply text-xs font-bold
+  }
+  
+  .card__platform{
+@apply flex justify-center items-center mb-7 
+  }
+
+  .card__count {
+    @apply text-white_bg font-bold tracking-[-2px] leading-none mb-1
+  }
+  .card__count--big {
+    @apply text-6xl
+  }
+  .card__count--small {
+  }
+
+  .card__label {
+    @apply text-white_text1 text-xs font-normal uppercase tracking-[5px]
+  }
+
+  
+  .card__followers{
+    
+    @apply mb-6
+  }
+
+  .card__number{
+    @apply ml-1
+  }
+  
+  .card__change {
+@apply text-xs font-bold flex items-center justify-center
+  }
+  .card__change--up {
+    @apply text-limegreen
+  }
+
+  .card__change--down {
+    @apply text-brightred
+  }
+
+  .card__icon--facebook {
+  }
+
+  .card__icon--twitter {
+  }
+
+  .card__icon--instagram {
+  }
+
+  .card__icon--youtube {
   }
 
   /* toggle */
