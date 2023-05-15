@@ -7,7 +7,7 @@ const Card = ({
   method,
   platform,
   username,
-  arrow
+  arrow,
 }: Card) => {
   return (
     <div className={`card card--${platform}`}>
@@ -27,7 +27,12 @@ const Card = ({
         <div className="card__label">{method}</div>
       </div>
       <div className={`card__change card__change--${arrow}`}>
-        <Image src="/images/icon-up.svg" alt="Up Arrow" width={8} height={4} />
+        <Image
+          src={`/images/icon-${arrow}.svg`}
+          alt={`${arrow} arrow`}
+          width={8}
+          height={4}
+        />
         <div className="card__number">{cardNumber}</div>
       </div>
     </div>

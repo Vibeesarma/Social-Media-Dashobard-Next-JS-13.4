@@ -1,5 +1,3 @@
-
-
 interface Card {
   username: string;
   icon: string;
@@ -8,4 +6,12 @@ interface Card {
   method: string;
   platform: string;
   arrow: string;
+}
+
+interface CardStatus {
+  title: string;
+  icon: string;
+  count: string;
+  arrow: string;
+  percentage: string;
 }

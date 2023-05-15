@@ -33,7 +33,7 @@
     @apply text-2xl mb-0.5 md:text-3xl font-bold;
   }
   h2 {
-    @apply text-2xl mb-6;
+    @apply text-2xl mb-6 font-bold;
   }
 
   a,
@@ -57,8 +57,8 @@
     @apply flex flex-wrap justify-between items-center mt-9;
   }
 
-  .cards{
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8
+  .cards {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8;
   }
 
   .header__title {
@@ -67,58 +67,74 @@
 
   /* card */
   .card {
-    @apply bg-dark_card text-dark_text1 w-full text-center p-6 rounded-md flex-1;
+    @apply bg-dark_card text-dark_text1 w-full text-center p-6 rounded-md flex-1 hover:bg-dark_card_hover transition duration-150 ease-in-out cursor-pointer;
   }
 
-  .card--facebook{
+  .card--facebook {
+    @apply border-t-4 border-facebook;
+  }
 
-    @apply border-t-4 border-facebook
+  .card--twitter {
+    @apply border-t-4 border-twitter;
+  }
+
+  .card--instagram {
+    @apply border-t-4 bg-gradient-to-t from-instagram_start to-instagram_end;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, red, blue);
+  }
+
+  .card--youtube {
+    @apply border-t-4 border-youtube;
   }
 
   .card__icon {
-    @apply mr-2
+    @apply mr-2;
   }
-  
+
   .card__username {
-    @apply text-xs font-bold
+    @apply text-xs font-bold;
   }
-  
-  .card__platform{
-@apply flex justify-center items-center mb-7 
+
+  .card__platform {
+    @apply flex justify-center items-center mb-7 h-5;
   }
 
   .card__count {
-    @apply text-white_bg font-bold tracking-[-2px] leading-none mb-1
+    @apply text-white_bg font-bold tracking-[-2px] leading-none mb-1;
   }
   .card__count--big {
-    @apply text-6xl
+    @apply text-6xl;
   }
   .card__count--small {
+    @apply text-3xl;
   }
 
   .card__label {
-    @apply text-white_text1 text-xs font-normal uppercase tracking-[5px]
+    @apply text-white_text1 text-xs font-normal uppercase tracking-[5px];
   }
 
-  
-  .card__followers{
-    
-    @apply mb-6
+  .card__followers {
+    @apply mb-6;
   }
 
-  .card__number{
-    @apply ml-1
+  .card__number {
+    @apply ml-1;
   }
-  
+
+  .card__subtitle {
+    @apply font-bold text-sm;
+  }
+
   .card__change {
-@apply text-xs font-bold flex items-center justify-center
+    @apply text-xs font-bold flex items-center justify-center;
   }
   .card__change--up {
-    @apply text-limegreen
+    @apply text-limegreen;
   }
 
   .card__change--down {
-    @apply text-brightred
+    @apply text-brightred;
   }
 
   .card__icon--facebook {
@@ -131,6 +147,13 @@
   }
 
   .card__icon--youtube {
+  }
+
+  /* below card */
+
+  /*  */
+  .card-grid {
+    @apply grid grid-cols-2 grid-rows-2 row-auto justify-items-start gap-5;
   }
 
   /* toggle */

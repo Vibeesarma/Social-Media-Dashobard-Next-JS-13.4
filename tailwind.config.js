@@ -35,6 +35,7 @@ module.exports = {
       dark_bg: "hsl(230, 17%, 14%)",
       dark_top_bg: "hsl(232, 19%, 15%)",
       dark_card: "hsl(228, 28%, 20%)",
+      dark_card_hover: "hsl(228,25%,27%)",
       dark_text1: "hsl(228, 34%, 66%)",
       dark_text2: "hsl(0, 0%, 100%)",
 
