@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -43,6 +44,7 @@ module.exports = {
       white_bg: "hsl(0, 0%, 100%)",
       white_top_bg: "hsl(225, 100%, 98%)",
       white_card: "hsl(227, 47%, 96%)",
+      white_card_hover:"hsl(228,33%,91%)",
       white_text1: "hsl(228, 12%, 44%)",
       white_text2: "hsl(230, 17%, 14%)",
     },

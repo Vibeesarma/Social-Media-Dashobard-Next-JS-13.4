@@ -16,7 +16,7 @@
   }
 
   body {
-    @apply m-0 p-0 bg-dark_bg text-dark_text2;
+    @apply m-0 p-0 dark:bg-dark_bg dark:text-dark_text2 text-white_text2 bg-white_bg;
   }
 }
 
@@ -46,8 +46,8 @@
     @apply text-sm font-bold text-toggle;
   }
 
-  input{
-    @apply opacity-0
+  input {
+    @apply opacity-0;
   }
 }
 
@@ -71,7 +71,7 @@
 
   /* card */
   .card {
-    @apply bg-dark_card text-dark_text1 w-full text-center p-6 rounded-md flex-1 hover:bg-dark_card_hover transition duration-150 ease-in-out cursor-pointer;
+    @apply dark:bg-dark_card bg-white_card dark:text-dark_text1 text-white_text1 w-full text-center p-6 rounded-md flex-1 hover:dark:bg-dark_card_hover hover:bg-white_card_hover transition duration-150 ease-in-out cursor-pointer;
   }
 
   .card--facebook {
@@ -105,7 +105,7 @@
   }
 
   .card__count {
-    @apply text-white_bg font-bold tracking-[-2px] leading-none mb-1;
+    @apply dark:text-white_bg text-dark_bg font-bold tracking-[-2px] leading-none mb-1;
   }
   .card__count--big {
     @apply text-6xl;
@@ -115,7 +115,7 @@
   }
 
   .card__label {
-    @apply text-white_text1 text-xs font-normal uppercase tracking-[5px];
+    @apply text-white_text1 dark:text-dark_text1 text-xs font-normal uppercase tracking-[5px];
   }
 
   .card__followers {
@@ -177,18 +177,18 @@
   }
 
   .toggle__background {
-    @apply bg-gradient-to-tr from-toggle_bg_start to-toggle_bg_end h-full block rounded-xl overflow-hidden absolute w-full top-0 pointer-events-none;
+    @apply dark:bg-gradient-to-tr dark:from-toggle_bg_start dark:to-toggle_bg_end bg-toggle h-full block rounded-xl overflow-hidden absolute w-full top-0 pointer-events-none;
   }
 
   .toggle__button {
-    @apply rounded-full w-5 h-5 bg-dark_bg absolute left-0.5 right-full top-0.5 transition-all duration-200 ease-in-out;
+    @apply rounded-full w-5 h-5 dark:bg-dark_bg bg-white_bg absolute left-0.5 right-full top-0.5 transition-all duration-200 ease-in-out;
   }
 
   .toggle__input:focus ~ .toggle__button {
-    @apply border border-white_bg;
+    @apply border dark:border-white_bg border-dark_bg;
   }
 
-  .light_input:checked~.toggle__button {
+  .light_input:checked ~ .toggle__button {
     @apply right-0.5 left-[26px];
   }
 
@@ -197,7 +197,7 @@
   } */
 
   .toggle > label[for="dark"] {
-    @apply  mr-3;
+    @apply mr-3;
   }
 
   /* .toggle > label[for="system"] {
