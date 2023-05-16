@@ -43,7 +43,11 @@
   }
 
   label {
-    @apply text-sm;
+    @apply text-sm font-bold text-toggle;
+  }
+
+  input{
+    @apply opacity-0
   }
 }
 
@@ -151,18 +155,21 @@
 
   /* below card */
 
-  /*  */
   .card-grid {
-    @apply grid grid-cols-2 grid-rows-2 row-auto justify-items-start gap-5;
+    @apply grid grid-cols-2 row-auto justify-items-start gap-5;
+  }
+
+  .visually-hidden {
+    @apply absolute top-auto w-1 h-1 overflow-hidden;
   }
 
   /* toggle */
   .toggle {
-    @apply border-none grid grid-cols-3 grid-rows-2 gap-y-1 gap-x-2 m-0;
+    @apply border-none m-0 grid grid-cols-2;
   }
 
   .toggle__wrapper {
-    @apply h-6 w-16 col-start-2 col-end-3 row-start-1 row-end-2 relative;
+    @apply h-6 w-12 relative;
   }
 
   .toggle__input {
@@ -170,7 +177,7 @@
   }
 
   .toggle__background {
-    @apply bg-gradient-to-tr from-toggle_bg_start to-toggle_bg_end h-full block rounded-xl overflow-hidden absolute w-full top-0;
+    @apply bg-gradient-to-tr from-toggle_bg_start to-toggle_bg_end h-full block rounded-xl overflow-hidden absolute w-full top-0 pointer-events-none;
   }
 
   .toggle__button {
@@ -181,23 +188,23 @@
     @apply border border-white_bg;
   }
 
-  .light_input:checked ~ .toggle__button {
-    @apply right-0.5 left-auto;
+  .light_input:checked~.toggle__button {
+    @apply right-0.5 left-[26px];
   }
 
-  .system_input:checked ~ .toggle__button {
+  /* .system_input:checked ~ .toggle__button {
     @apply right-auto left-3 transform translate-x-1/2;
-  }
+  } */
 
   .toggle > label[for="dark"] {
-    @apply col-start-1 col-end-2 justify-self-end self-center;
+    @apply  mr-3;
   }
 
-  .toggle > label[for="system"] {
+  /* .toggle > label[for="system"] {
     @apply col-start-1 col-end-4 row-start-2 row-end-3 justify-self-center self-start;
   }
 
   .toggle > label[for="light"] {
     @apply col-start-3 col-end-4 self-center;
-  }
+  } */
 }
