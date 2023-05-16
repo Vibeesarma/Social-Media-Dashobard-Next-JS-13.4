@@ -9,8 +9,10 @@ const Card = ({
   username,
   arrow,
 }: Card) => {
+  const classTheme = `card--${platform}`;
+
   return (
-    <div className={`card card--${platform}`}>
+    <div className={`card ${classTheme}`}>
       <div className="card__platform">
         <Image
           className="card__icon"

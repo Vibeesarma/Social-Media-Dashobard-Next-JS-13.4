@@ -15,18 +15,15 @@ const DarkModeButton = () => {
     return null;
   }
   const currentTheme = theme === "system" ? systemTheme : theme;
-  console.log(
-    "🚀 ~ file: DarkModeButton.tsx:19 ~ DarkModeButton ~ currentTheme:",
-    currentTheme
-  );
+
   return (
     <fieldset
       onChange={(e: any) => setTheme(e.target.value)}
-      className="header__toggle toggle"
+      className="header__toggle toggle mr-0 justify-items-end"
       aria-label="theme toggle"
       role="radiogroup"
     >
-      <label htmlFor="dark">
+      <label htmlFor="dark" className="sm:relative sm:left-9 w-full pl-3">
         Dark Mode
         <span className="visually-hidden">On</span>
       </label>
