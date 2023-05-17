@@ -1,6 +1,6 @@
 import card_status_details from "@/lib/card_status_details";
 import React from "react";
-import CardSigleStatus from "./CardSigleStatus";
+import CardSingleStatus from "./CardSingleStatus";
 
 const CardBelowSection = () => {
   return (
@@ -8,7 +8,7 @@ const CardBelowSection = () => {
       <h2>Overview - Today</h2>
       <div className="cards">
         {card_status_details.map((card, index) => (
-          <CardSigleStatus key={index} {...card} />
+          <CardSingleStatus key={index} {...card} />
         ))}
       </div>
     </section>

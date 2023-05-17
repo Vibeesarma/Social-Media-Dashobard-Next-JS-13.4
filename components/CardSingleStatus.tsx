@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const CardSigleStatus = ({
+const CardSingleStatus = ({
   arrow,
   count,
   icon,
@@ -40,4 +40,4 @@ const CardSigleStatus = ({
   );
 };
 
-export default CardSigleStatus;
+export default CardSingleStatus;
