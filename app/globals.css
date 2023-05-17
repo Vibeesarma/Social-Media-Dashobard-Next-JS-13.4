@@ -71,25 +71,23 @@
 
   /* card */
   .card {
-    @apply dark:bg-dark_card bg-white_card dark:text-dark_text1 text-white_text1 w-full text-center p-6 rounded-md flex-1 hover:dark:bg-dark_card_hover hover:bg-white_card_hover transition duration-150 ease-in-out cursor-pointer overflow-hidden;
+    @apply dark:bg-dark_card bg-white_card dark:text-dark_text1 text-white_text1 w-full text-center p-6 flex-1 hover:dark:bg-dark_card_hover hover:bg-white_card_hover transition duration-150 ease-in-out cursor-pointer overflow-hidden rounded-b-md;
   }
 
-  .card--facebook {
-    @apply border-t-4 border-facebook;
+  .card__facebook {
+    @apply pt-1 bg-facebook rounded-lg;
   }
 
-  .card--twitter {
-    @apply border-t-4 border-twitter;
+  .card__twitter {
+    @apply pt-1 bg-twitter rounded-lg;
   }
 
-  .card--instagram {
-    @apply border-t-4;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, red, blue);
+  .card__instagram {
+    @apply pt-1 rounded-lg bg-gradient-to-br from-instagram_start to-instagram_end;
   }
 
-  .card--youtube {
-    @apply border-t-4 border-youtube;
+  .card__youtube {
+    @apply pt-1 bg-youtube rounded-lg;
   }
 
   .card__icon {
@@ -144,7 +142,7 @@
   /* below card */
 
   .card-grid {
-    @apply grid grid-cols-2 row-auto justify-items-start gap-5;
+    @apply grid grid-cols-2 row-auto justify-items-start gap-5 rounded-t-md;
   }
 
   .visually-hidden {
